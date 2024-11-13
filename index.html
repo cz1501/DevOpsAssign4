@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie Zhang - Resume</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent), var(--accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info {
+            color: var(--text-secondary);
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border-color);
+            margin-left: 0.5rem;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skills-category {
+            padding: 1.5rem;
+            background: var(--bg-primary);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .date {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        .education-item, .project-item, .experience-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--bg-primary);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .experience-item p em {
+            color: var(--accent);
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            section {
+                transition: none;
+            }
+        }
+
+        /* Subtle hover effects */
+        .skills-category:hover,
+        .education-item:hover,
+        .project-item:hover,
+        .experience-item:hover {
+            border-color: var(--accent);
+            transition: border-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Charlie Zhang</h1>
+            <div class="contact-info">
+                <span>📧 jd@gmail.com</span>
+                <span>📱 (001)555-5555</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Technology Stack</h3>
+                    <ul>
+                        <li>Firebase</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>JavaScript, HTML, CSS</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C/C++ and MATLAB</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Professional Skills</h3>
+                    <ul>
+                        <li>Agile Development</li>
+                        <li>Technical Writing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>British Columbia Institute of Technology</h3>
+                <p>Computer Systems Technology Diploma program</p>
+                <div class="date">January, 2023 – Current</div>
+            </div>
+            <div class="education-item">
+                <h3>University of British Columbia</h3>
+                <p>Bachelor of Applied Science in Geological Engineering</p>
+                <div class="date">September, 2011 – April, 2017</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Projects</h2>
+            <div class="project-item">
+                <h3>NewJourney (BCIT)</h3>
+                <div class="date">May, 2023 – June, 2023</div>
+                <ul>
+                    <li>Developed a mobile web application aimed at assisting newcomers by providing multilingual guidance</li>
+                    <li>Collaborated effectively within a team of four, using Agile methodologies</li>
+                    <li>Designed and implemented a MongoDB database</li>
+                    <li>Integrated ChatGPT for personalized assistance</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Navi (BCIT)</h3>
+                <div class="date">January, 2013 – May, 2013</div>
+                <ul>
+                    <li>Created a mobile web application for navigational assistance</li>
+                    <li>Utilized Firebase for hosting and database needs</li>
+                    <li>Developed using JavaScript, HTML, and CSS</li>
+                    <li>Presented to stakeholders effectively</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>SUD RPG (BCIT)</h3>
+                <div class="date">September, 2013 – November, 2013</div>
+                <ul>
+                    <li>Designed and developed a text-based adventure game using Python</li>
+                    <li>Implemented complex game mechanics</li>
+                    <li>Conducted extensive unit testing</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Active Earth Engineering Ltd.</h3>
+                <p><em>Project Scientist</em></p>
+                <div class="date">June, 2017 – April, 2020</div>
+                <ul>
+                    <li>Supervised drill rigs for boreholes and monitoring wells</li>
+                    <li>Coordinated environmental investigations and remedial activities</li>
+                    <li>Prepared technical reports including Site Investigations</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>SGS NAM - Environmental</h3>
+                <p><em>Laboratory Analyst</em></p>
+                <div class="date">May, 2014 – December, 2014</div>
+                <ul>
+                    <li>Performed extraction procedures for various sample types</li>
+                    <li>Managed work order turnaround times effectively</li>
+                    <li>Maintained safety protocols in hazardous environments</li>
+                    <li>Collaborated in 2-6 person teams</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
